@@ -1,0 +1,17 @@
+{
+  "name": "dark-theme",
+  "version": "1.0.0",
+  "description": "A little example of changing the theme with Tailwind and JS",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss build ./src/styles.css -o ./css/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Axel Libori Roch",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.9",
+    "tailwindcss": "^2.1.1"
+  }
+}

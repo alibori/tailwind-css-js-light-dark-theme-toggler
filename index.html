@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS & JS dark theme toggler</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-white text-black dark:bg-gray-800 dark:text-white">
+    <div class="block absolute top-1 right-2 w-16 text-4xl">
+        <button id="theme-toggler" class="w-full animate-pulse focus:outline-none" onclick="themeToggle()">🌙</button>
+    </div>
+
+    <h1 class="block w-9/12 mx-auto mt-20 text-center text-6xl">Hi Fogs 👋! Let's change the <span id="theme-name" class="">light theme! 🏖️</span></h1>
+
+    <script>
+        function themeToggle() {
+            if (document.querySelector('html').className !== 'dark') {
+                document.querySelector('html').className = 'dark'
+                document.getElementById('theme-toggler').innerHTML = '☀️'
+                document.getElementById('theme-name').innerHTML = 'dark theme! 🌃'
+            } else {
+                document.querySelector('html').className = ''
+                document.getElementById('theme-toggler').innerHTML = '🌙'
+                document.getElementById('theme-name').innerHTML = 'light theme! 🏖️'
+            }
+        }
+    </script>
+</body>
+</html>
